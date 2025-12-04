@@ -1,47 +1,123 @@
 body {
   background: #304d50;
 }
-
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 77px 120px 0px 120px;
 }
-
 .nav {
   display: flex;
   gap: 48px;
 }
-
 .hero {
   display: flex;
   align-items: center;
   padding: 115px 120px 134px 120px;
   gap: 75px;
 }
-
 .nav-item {
   color: #fafafacc;
   font-size: 23px;
 }
 .hero-title {
-  color: #fafafaf2;
-  font-size: 88px;
+  color: #fafafa;
+  font-size: 80px;
 }
 .hero-desc {
-  color: #fafafae5;
+  color: #fafafacc;
   font-size: 20px;
-  padding: 35px 0 50px 0;
+  padding: 35px 0px 50px 0px;
+}
+.hero-button {
+  color: #fafafa;
+  font-size: 20px;
+  padding: 20px 40px;
+  background: #203639;
+  border-radius: 10px;
 }
 .hero-btn button {
-  font-size: 20px;
-  background: #C6D8BD;
-  padding: 10px 25px 10px 25px;
   border-radius: 33px;
-    color: #0A0F10;
-    border: none;
+  background: #c6d8bd;
+  padding: 10px 25px;
+  border: none;
+  font-weight: bold;
 }
-.title-line2 {
-  color: #cedfc3f2;
+
+.header button {
+  display: none;
+}
+
+/* style for ipad */
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .header button {
+    background: none;
+    border: none;
+  }
+
+  .header {
+    padding: 64px 50px 0 50px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 64px 50px 51px 50px;
+    gap: 31px;
+  }
+  .hero-title {
+    font-size: 58px;
+  }
+  .title-line2 {
+    font-size: 58px;
+    color: #cedfc3f2;
+  }
+  .hero-desc {
+    font-size: 22px;
+  }
+  .header button {
+    background: none;
+    border: none;
+    display: block;
+  }
+}
+
+/* style for mobile */
+@media screen and (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+  .header button {
+    background: none;
+    border: none;
+  }
+  .header {
+    padding: 34px 20px 0 34px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .hero-title {
+    font-size: 30px;
+  }
+  .title-line2 {
+    font-size: 38px;
+    color: #cedfc3f2;
+  }
+  .hero-desc {
+    font-size: 9px;
+  }
+  .header button {
+    background: none;
+    border: none;
+  }
+  .hero-img img {
+    width: 100%;
+  }
 }
